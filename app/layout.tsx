@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Products | Fieldnotes",
-  description: "Manage products, prices, and inventory quantities.",
+  title: "Mira | Inventory Studio",
+  description: "A calm, lovely space to manage your products and inventory.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

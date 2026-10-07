@@ -82,20 +82,20 @@ export default function AuthPage() {
     <main className="auth-shell">
       <section className="auth-layout">
         <div className="auth-aside">
-          <a className="brand" href="#account" aria-label="Fieldnotes home">
+          <a className="brand" href="#account" aria-label="Mira home">
             <span className="brand-mark" aria-hidden="true">
-              F
+              M
             </span>
             <span>
-              fieldnotes<span className="brand-period">.</span>
+              mira<span className="brand-period">.</span>
             </span>
           </a>
           <div className="auth-aside-copy">
             <div className="eyebrow">
-              FIELDNOTES <span>·</span> PRIVATE WORKSPACE
+              MIRA <span>·</span> INVENTORY STUDIO
             </div>
-            <h1>Good records start here.</h1>
-            <p>Sign in to manage your product inventory.</p>
+            <h1>A little more lovely, a lot more organized.</h1>
+            <p>Your products, prices, and stock in one calm space.</p>
           </div>
           <div className="auth-aside-footer">
             <span className="status-dot" aria-hidden="true" /> Inventory
@@ -125,7 +125,7 @@ export default function AuthPage() {
             </div>
             <div className="auth-heading">
               <div className="eyebrow">ACCOUNT ACCESS</div>
-              <h2>{mode === "login" ? "Welcome back" : "Join Fieldnotes"}</h2>
+              <h2>{mode === "login" ? "Welcome back" : "Join Mira"}</h2>
               <p>
                 {mode === "login"
                   ? "Enter your account details to continue."

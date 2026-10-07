@@ -204,18 +204,18 @@ export default function ProductsPage() {
   return (
     <main className="app-shell">
       <aside className="sidebar" aria-label="Main navigation">
-        <a className="brand" href="#products" aria-label="Fieldnotes home">
+        <a className="brand" href="#products" aria-label="Mira home">
           <span className="brand-mark" aria-hidden="true">
-            F
+            M
           </span>
           <span>
-            fieldnotes<span className="brand-period">.</span>
+            mira<span className="brand-period">.</span>
           </span>
         </a>
-        <div className="sidebar-label">WORKSPACE</div>
+        <div className="sidebar-label">YOUR SPACE</div>
         <a className="nav-link active" href="#products" aria-current="page">
           <span className="nav-glyph" aria-hidden="true">
-            ▦
+            â–¦
           </span>
           Products
           <span className="nav-count">{products.length}</span>
@@ -232,7 +232,7 @@ export default function ProductsPage() {
           <div className="breadcrumb">
             <span>Workspace</span>
             <span aria-hidden="true">/</span>
-            <strong>Products</strong>
+            <strong>Overview</strong>
           </div>
           <div className="topbar-note">
             <span className="status-dot" aria-hidden="true" />
@@ -251,11 +251,11 @@ export default function ProductsPage() {
           <div className="page-heading">
             <div>
               <div className="eyebrow">
-                INVENTORY <span>·</span> 01
+                INVENTORY <span>Â·</span> 01
               </div>
-              <h1>Products</h1>
+              <h1>Your inventory</h1>
               <p className="page-subtitle">
-                A clear view of your product inventory.
+                Everything you carry, all in one lovely place.
               </p>
             </div>
             <button
@@ -274,14 +274,14 @@ export default function ProductsPage() {
             <div className="stat-item">
               <span className="stat-label">PRODUCTS</span>
               <strong>
-                {loading ? "—" : products.length.toString().padStart(2, "0")}
+                {loading ? "â€”" : products.length.toString().padStart(2, "0")}
               </strong>
             </div>
             <div className="stat-divider" />
             <div className="stat-item">
               <span className="stat-label">UNITS IN STOCK</span>
               <strong>
-                {loading ? "—" : totalQuantity.toString().padStart(2, "0")}
+                {loading ? "â€”" : totalQuantity.toString().padStart(2, "0")}
               </strong>
             </div>
             <div className="stats-caption">
@@ -295,13 +295,13 @@ export default function ProductsPage() {
                 <h2 id="products-title">Inventory</h2>
                 <p>
                   {loading
-                    ? "Loading records…"
+                    ? "Loading recordsâ€¦"
                     : `${filteredProducts.length} ${filteredProducts.length === 1 ? "product" : "products"}`}
                 </p>
               </div>
               <label className="search-box">
                 <span className="search-icon" aria-hidden="true">
-                  ⌕
+                  âŒ•
                 </span>
                 <span className="visually-hidden">Search products</span>
                 <input
@@ -315,14 +315,14 @@ export default function ProductsPage() {
 
             {notice && (
               <div className="notice success-notice" role="status">
-                <span aria-hidden="true">✓</span>
+                <span aria-hidden="true">âœ“</span>
                 {notice}
                 <button
                   type="button"
                   aria-label="Dismiss notification"
                   onClick={() => setNotice("")}
                 >
-                  ×
+                  Ã—
                 </button>
               </div>
             )}
@@ -385,7 +385,7 @@ export default function ProductsPage() {
                               onClick={openCreateForm}
                               type="button"
                             >
-                              Add a product <span aria-hidden="true">→</span>
+                              Add a product <span aria-hidden="true">â†’</span>
                             </button>
                           )}
                         </div>
@@ -451,10 +451,9 @@ export default function ProductsPage() {
           </section>
           <footer className="page-footer">
             <span>
-              FIELDNOTES <span className="brand-period">·</span> PRODUCT
-              INVENTORY
+              MIRA <span className="brand-period">·</span> INVENTORY STUDIO
             </span>
-            <span>Keep good company.</span>
+            <span>Made for the things you make.</span>
           </footer>
         </div>
       </section>
@@ -480,7 +479,7 @@ export default function ProductsPage() {
                 onClick={() => setFormOpen(false)}
                 aria-label="Close form"
               >
-                ×
+                Ã—
               </button>
             </div>
             <h2 id="form-title">
@@ -488,7 +487,7 @@ export default function ProductsPage() {
             </h2>
             <p className="dialog-description">
               {editingProduct
-                ? "Make changes to this product’s details."
+                ? "Make changes to this productâ€™s details."
                 : "Add a new product to the inventory."}
             </p>
             {formError && (
@@ -548,7 +547,7 @@ export default function ProductsPage() {
                   disabled={saving}
                 >
                   {saving
-                    ? "Saving…"
+                    ? "Savingâ€¦"
                     : editingProduct
                       ? "Save changes"
                       : "Add product"}
@@ -583,13 +582,13 @@ export default function ProductsPage() {
                 disabled={deleting}
                 aria-label="Close confirmation"
               >
-                ×
+                Ã—
               </button>
             </div>
             <h2 id="delete-title">Remove this product?</h2>
             <p className="dialog-description" id="delete-description">
               {deletingProduct.product_name} will be removed from the inventory.
-              This action can’t be undone.
+              This action canâ€™t be undone.
             </p>
             <div className="dialog-actions">
               <button
@@ -606,7 +605,7 @@ export default function ProductsPage() {
                 onClick={() => void handleDelete()}
                 disabled={deleting}
               >
-                {deleting ? "Removing…" : "Remove product"}
+                {deleting ? "Removingâ€¦" : "Remove product"}
               </button>
             </div>
           </section>
